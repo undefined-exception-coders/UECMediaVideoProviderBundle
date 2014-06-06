@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="uec_media_video_provider.file_system.default.class">UEC\MediaVideoProviderBundle\FileSystem\MediaVideoProviderFileSystem</parameter>
+    </parameters>
+
+    <services>
+        <service id="uec_media_video_provider.file_system.default" class="%uec_media_video_provider.file_system.default.class%">
+            <argument type="service" id="uec_media_video_provider.http" />
+            <argument type="service" id="uec_media.path.generator" />
+        </service>
+    </services>
+</container>
