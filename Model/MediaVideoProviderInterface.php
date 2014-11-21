@@ -4,15 +4,6 @@ namespace UEC\MediaVideoProviderBundle\Model;
 
 interface MediaVideoProviderInterface
 {
-    const PROVIDER_YOUTUBE = 'youtube';
-    const PROVIDER_VIMEO = 'vimeo';
-    const PROVIDER_DAILY_MOTION = 'daily_motion';
-
-    /**
-     * @return array
-     */
-    public static function getProviders();
-
     /**
      * @param $provider
      * @return MediaVideoProviderInterface

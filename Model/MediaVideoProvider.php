@@ -62,28 +62,11 @@ abstract class MediaVideoProvider extends MediaProvider implements MediaVideoPro
     protected $html;
 
     /**
-     * @return array
-     */
-    public static function getProviders()
-    {
-        return array(
-            self::PROVIDER_YOUTUBE,
-            self::PROVIDER_VIMEO,
-            self::PROVIDER_DAILY_MOTION,
-        );
-    }
-
-    /**
      * @param $provider
      * @return MediaVideoProviderInterface
-     * @throws \Exception
      */
     public function setProvider($provider)
     {
-        if (!in_array($provider, self::getProviders())) {
-            throw new \Exception(sprintf('Provider %s is not supported', $provider));
-        }
-
         $this->provider = $provider;
 
         return $this;

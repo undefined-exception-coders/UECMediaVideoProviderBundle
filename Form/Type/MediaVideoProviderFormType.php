@@ -10,10 +10,12 @@ use UEC\MediaVideoProviderBundle\Model\MediaVideoProvider;
 class MediaVideoProviderFormType extends AbstractType
 {
     protected $modelClass;
+    protected $providers;
 
-    function __construct($modelClass)
+    function __construct($modelClass, array $providers)
     {
         $this->modelClass = $modelClass;
+        $this->providers = array_keys($providers);
     }
 
     public function buildForm(FormBuilderInterface $builder, array $options)
@@ -22,8 +24,8 @@ class MediaVideoProviderFormType extends AbstractType
             ->add('provider', 'choice', array(
                 'label' => 'label.provider',
                 'choices' => array_combine(
-                    MediaVideoProvider::getProviders(),
-                    MediaVideoProvider::getProviders()
+                    $this->providers,
+                    $this->providers
                 ),
                 'translation_domain' => 'UECMediaVideoProviderBundle'
             ))

@@ -2,15 +2,14 @@
 
 namespace UEC\MediaVideoProviderBundle\Http;
 
-use UEC\MediaVideoProviderBundle\Model\MediaVideoProviderInterface;
-
 abstract class AbstractHttp implements HttpInterface
 {
-    private $providers = array(
-        MediaVideoProviderInterface::PROVIDER_YOUTUBE => 'http://www.youtube.com/oembed?url=%s&format=json',
-        MediaVideoProviderInterface::PROVIDER_VIMEO => 'http://vimeo.com/api/oembed.json?url=%s',
-        MediaVideoProviderInterface::PROVIDER_DAILY_MOTION => 'http://www.dailymotion.com/services/oembed?format=json&url=%s',
-    );
+    private $providers;
+
+    function __construct(array $providers)
+    {
+        $this->providers = $providers;
+    }
 
     /**
      * Get url to call
