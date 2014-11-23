@@ -16,13 +16,13 @@
 
         <field name="authorUrl" column="author_url" type="string" nullable="true" />
 
-        <field name="thumbnailUrl" column="thumbnail_url" type="string" nullable="false" />
+        <field name="thumbnailUrl" column="thumbnail_url" type="string" nullable="true" />
 
         <field name="thumbnailWidth" column="thumbnail_width" type="integer" nullable="true" />
 
         <field name="thumbnailHeight" column="thumbnail_height" type="integer" nullable="true" />
 
-        <field name="thumbnailPath" column="thumbnail_path" type="string" nullable="false" />
+        <field name="thumbnailPath" column="thumbnail_path" type="string" nullable="true" />
 
         <field name="embedUrl" column="embed_url" type="string" nullable="true" />
 
