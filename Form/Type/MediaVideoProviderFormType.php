@@ -27,7 +27,6 @@ class MediaVideoProviderFormType extends AbstractType
                     $this->providers,
                     $this->providers
                 ),
-                'translation_domain' => 'UECMediaVideoProviderBundle'
             ))
             ->add('media', 'uec_media_video_provider_form_media')
         ;
