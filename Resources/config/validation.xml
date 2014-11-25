@@ -8,9 +8,6 @@
         <constraint name="UEC\MediaVideoProviderBundle\Validator\Constraints\UrlProvider" />
         <property name="provider">
             <constraint name="NotBlank" />
-            <constraint name="Choice">
-                <option name="callback">getProviders</option>
-            </constraint>
         </property>
     </class>
 </constraint-mapping>
