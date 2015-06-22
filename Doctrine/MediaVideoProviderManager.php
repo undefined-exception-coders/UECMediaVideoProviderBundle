@@ -58,7 +58,7 @@ class MediaVideoProviderManager extends MediaProviderManager
     {
         $this->em->persist($mediaProvider);
         if ($andFlush) {
-            $this->em->flush();
+            $this->em->flush($mediaProvider);
         }
     }
 
